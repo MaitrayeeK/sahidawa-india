@@ -251,6 +251,7 @@ npm run dev
 ### ML Service (Python)
 
 For detailed setup instructions, see: [ML Setup Guide](./docs/getting-started/ml-setup.md)
+
 For local setup instructions, see: [Local Setup Guide](./docs/getting-started/local-setup.md)
 
 Quick start:
