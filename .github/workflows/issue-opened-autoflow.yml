@@ -77,18 +77,16 @@ jobs:
                 .join('\n');
 
               const capMsg = [
-                '## \u26a0\ufe0f Auto-Assignment Skipped \u2014 3-Issue Cap Reached',
+                '## ❌ Issue Automatically Closed — 3-Issue Cap Reached',
                 '',
-                'Hi @' + opener + '! \uD83D\uDC4B You\'ve already been assigned to **' + activeIssues.length + ' open issues**:',
+                'Hi @' + opener + '! 👋 You currently have **' + activeIssues.length + ' open issues assigned to you** without an active PR:',
                 '',
                 list,
                 '',
-                'We cap active assignments at **3** to keep the queue fair for all contributors.',
+                '> **You cannot raise more than 3 issues at once while your current assigned issues do not have PRs.**',
                 '',
-                '**Please complete or close your existing work before this issue can be assigned to you.**',
-                'Once you\'re done, drop a comment with `/assign` here and a maintainer will assign you.',
-                '',
-                'In the meantime, this issue is open for other contributors to claim.'
+                'First complete your existing tasks, then move to raise new issues with the proper template. This keeps the queue fair for all contributors.',
+                'Thank you for your understanding! 💙'
               ].join('\n');
 
               await github.rest.issues.createComment({
@@ -96,7 +94,14 @@ jobs:
                 body: capMsg
               });
 
-              core.info('@' + opener + ' already has ' + activeIssues.length + ' active issues. Skipping auto-assign.');
+              // NEW: Close the issue automatically
+              await github.rest.issues.update({
+                owner, repo, issue_number: issueNo,
+                state: 'closed',
+                state_reason: 'not_planned'
+              });
+
+              core.info('@' + opener + ' has ' + activeIssues.length + ' active issues. Issue #' + issueNo + ' closed.');
               return;
             }
 
