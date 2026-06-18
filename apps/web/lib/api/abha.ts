@@ -1,6 +1,8 @@
 import { API_BASE, getCsrfToken } from "../api";
 import { fetchWithRetry } from "../apiWithRetry";
 
+// ─── Interfaces ───────────────────────────────────────────────────────────────
+
 export interface ABHALinkResponse {
     txnId: string;
 }
@@ -14,6 +16,16 @@ export interface ABHAPrescription {
     title: string;
     issuedAt: string;
 }
+
+export interface ABHAUploadResponse {
+    success: boolean;
+}
+
+export interface ABHAUnlinkResponse {
+    success: boolean;
+}
+
+// ─── Link ABHA ────────────────────────────────────────────────────────────────
 
 export async function linkABHA(
     payload: {
@@ -38,11 +50,14 @@ export async function linkABHA(
     });
 
     if (!res.ok) {
-        throw new Error("Failed to initiate ABHA linking");
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error ?? "Failed to initiate ABHA linking");
     }
 
     return res.json() as Promise<ABHALinkResponse>;
 }
+
+// ─── Verify OTP ───────────────────────────────────────────────────────────────
 
 export async function verifyABHAOtp(
     payload: {
@@ -68,11 +83,14 @@ export async function verifyABHAOtp(
     });
 
     if (!res.ok) {
-        throw new Error("Failed to verify OTP");
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error ?? "Failed to verify OTP");
     }
 
     return res.json() as Promise<ABHAVerifyResponse>;
 }
+
+// ─── Get Prescriptions ────────────────────────────────────────────────────────
 
 export async function getABHAPrescriptions(
     accessToken?: string,
@@ -89,11 +107,14 @@ export async function getABHAPrescriptions(
     });
 
     if (!res.ok) {
-        throw new Error("Failed to fetch prescriptions");
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error ?? "Failed to fetch prescriptions");
     }
 
     return res.json() as Promise<ABHAPrescription[]>;
 }
+
+// ─── Upload Verification ──────────────────────────────────────────────────────
 
 export async function uploadABHAVerification(
     payload: {
@@ -103,7 +124,7 @@ export async function uploadABHAVerification(
     },
     accessToken?: string,
     signal?: AbortSignal
-): Promise<{ success: boolean }> {
+): Promise<ABHAUploadResponse> {
     const csrfToken = await getCsrfToken();
 
     const res = await fetchWithRetry(`${API_BASE}/api/v1/abha/upload-verification`, {
@@ -120,16 +141,22 @@ export async function uploadABHAVerification(
     });
 
     if (!res.ok) {
-        throw new Error("Failed to upload verification");
+        const body = (await res.json().catch(() => ({}))) as {
+            error?: string;
+        };
+
+        throw new Error(body.error ?? "Failed to upload verification");
     }
 
-    return res.json() as Promise<{ success: boolean }>;
+    return res.json() as Promise<ABHAUploadResponse>;
 }
+
+// ─── Unlink ABHA ──────────────────────────────────────────────────────────────
 
 export async function unlinkABHA(
     accessToken?: string,
     signal?: AbortSignal
-): Promise<{ success: boolean }> {
+): Promise<ABHAUnlinkResponse> {
     const csrfToken = await getCsrfToken();
 
     const res = await fetchWithRetry(`${API_BASE}/api/v1/abha/unlink`, {
@@ -145,8 +172,9 @@ export async function unlinkABHA(
     });
 
     if (!res.ok) {
-        throw new Error("Failed to unlink ABHA");
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error ?? "Failed to unlink ABHA");
     }
 
-    return res.json() as Promise<{ success: boolean }>;
+    return res.json() as Promise<ABHAUnlinkResponse>;
 }

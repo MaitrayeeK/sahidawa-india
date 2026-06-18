@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Link, useRouter } from "@/i18n/routing";
 import { User, ShieldCheck, Bell, ChevronRight, ArrowLeft, LogIn, LogOut } from "lucide-react";
+import ABHABadge from "@/components/ABHABadge";
 
 const ACCESS_TOKEN_KEY = "sb-access-token";
 
@@ -84,6 +85,7 @@ export default function ProfilePage() {
             : session.status === "checking"
               ? "Checking account status"
               : "Guest User";
+
     const accountSubtitle =
         session.status === "authenticated"
             ? "Authenticated account"
@@ -116,7 +118,6 @@ export default function ProfilePage() {
                     className="mb-6 inline-flex items-center gap-2 rounded-xl px-3 py-2 font-medium text-(--color-text-secondary) transition-all hover:bg-(--color-surface-page) hover:text-emerald-600 focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:outline-none dark:hover:text-emerald-400"
                 >
                     <ArrowLeft size={18} />
-
                     <span className="font-medium">Back to Home</span>
                 </Link>
 
@@ -157,6 +158,12 @@ export default function ProfilePage() {
                                 <p className="mt-1 text-sm text-(--color-text-secondary)">
                                     {accountSubtitle}
                                 </p>
+
+                                {session.status === "authenticated" && (
+                                    <div className="mt-2">
+                                        <ABHABadge linked={true} />
+                                    </div>
+                                )}
                             </div>
                         </div>
 
@@ -181,15 +188,45 @@ export default function ProfilePage() {
                             >
                                 <div className="flex items-center gap-3">
                                     <LogOut size={20} className="text-red-500" />
-
                                     <span className="font-semibold text-(--color-text-primary)">
                                         Sign Out
                                     </span>
                                 </div>
-
                                 <ChevronRight size={18} className="text-(--color-text-muted)" />
                             </button>
                         )}
+
+                        <Link
+                            href="/abha-setup"
+                            className="flex items-center justify-between p-5 transition-colors hover:bg-(--color-surface-muted)"
+                        >
+                            <div className="flex items-center gap-3">
+                                <ShieldCheck
+                                    size={20}
+                                    className="text-emerald-600 dark:text-emerald-400"
+                                />
+                                <span className="font-semibold text-(--color-text-primary)">
+                                    ABHA Setup
+                                </span>
+                            </div>
+                            <ChevronRight size={18} className="text-(--color-text-muted)" />
+                        </Link>
+
+                        <Link
+                            href="/abha-records"
+                            className="flex items-center justify-between p-5 transition-colors hover:bg-(--color-surface-muted)"
+                        >
+                            <div className="flex items-center gap-3">
+                                <ShieldCheck
+                                    size={20}
+                                    className="text-emerald-600 dark:text-emerald-400"
+                                />
+                                <span className="font-semibold text-(--color-text-primary)">
+                                    ABHA Records
+                                </span>
+                            </div>
+                            <ChevronRight size={18} className="text-(--color-text-muted)" />
+                        </Link>
 
                         <button
                             type="button"
@@ -197,12 +234,10 @@ export default function ProfilePage() {
                         >
                             <div className="flex items-center gap-3">
                                 <Bell size={20} className="text-red-500" />
-
                                 <span className="font-semibold text-(--color-text-primary)">
                                     Notification Settings
                                 </span>
                             </div>
-
                             <ChevronRight size={18} className="text-(--color-text-muted)" />
                         </button>
 
@@ -215,12 +250,10 @@ export default function ProfilePage() {
                                     size={20}
                                     className="text-emerald-600 dark:text-emerald-400"
                                 />
-
                                 <span className="font-semibold text-(--color-text-primary)">
                                     Privacy & Security
                                 </span>
                             </div>
-
                             <ChevronRight size={18} className="text-(--color-text-muted)" />
                         </button>
                     </div>

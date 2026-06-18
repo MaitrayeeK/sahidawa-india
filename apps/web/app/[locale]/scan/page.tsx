@@ -3,6 +3,7 @@
 import { useState, useCallback, useRef, useEffect } from "react";
 import { SkeletonLoader } from "@/components/scanner/SkeletonLoader";
 import imageCompression from "browser-image-compression";
+import { uploadABHAVerification } from "@/lib/api/abha";
 import {
     Camera,
     ShieldCheck,
@@ -553,6 +554,25 @@ export default function ScanPage() {
 
     const ocrWorkerRef = useRef<Tesseract.Worker | null>(null);
     const ocrCancelledRef = useRef(false);
+
+    const handleSaveToABHA = async () => {
+        if (!verifyResult?.verified) return;
+
+        try {
+            await uploadABHAVerification({
+                medicineId: "demo-medicine",
+                verificationResult: verifyResult.medicine.is_counterfeit_alert
+                    ? "counterfeit"
+                    : "verified",
+                scannedAt: new Date().toISOString(),
+            });
+
+            toast.success("Verification saved to ABHA");
+        } catch (error) {
+            console.error(error);
+            toast.error("Failed to save to ABHA");
+        }
+    };
 
     // Auto-retry when coming back online
     const handleVerifyRef = useRef<(batch: string) => Promise<void>>(null as any);
@@ -1351,14 +1371,23 @@ export default function ScanPage() {
                                                     </p>
                                                 </div>
                                             )}
-                                            <VerifiedSafeResult
-                                                medicine={verifyResult.medicine}
-                                                scanMeta={verifyResult.scanMeta}
-                                                onScanAgain={handleScanAgain}
-                                                onShare={handleShare}
-                                                shareLabel={tScan("share.button")}
-                                                fuzzyScore={fuzzyScore}
-                                            />
+                                            <>
+                                                <VerifiedSafeResult
+                                                    medicine={verifyResult.medicine}
+                                                    scanMeta={verifyResult.scanMeta}
+                                                    onScanAgain={handleScanAgain}
+                                                    onShare={handleShare}
+                                                    shareLabel={tScan("share.button")}
+                                                    fuzzyScore={fuzzyScore}
+                                                />
+
+                                                <button
+                                                    onClick={handleSaveToABHA}
+                                                    className="mt-4 w-full rounded-xl bg-emerald-600 px-4 py-3 font-semibold text-white hover:bg-emerald-700"
+                                                >
+                                                    Save to ABHA Record
+                                                </button>
+                                            </>
                                             {showSafetyPanel && (
                                                 <MedicineSafetyPanel
                                                     searchQuery={

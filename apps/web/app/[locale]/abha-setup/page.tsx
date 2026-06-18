@@ -11,8 +11,16 @@ export default function ABHASetupPage() {
     const [otp, setOtp] = useState("");
     const [linked, setLinked] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
 
     const handleGenerateOtp = async () => {
+        setError("");
+
+        if (!abhaAddress.trim()) {
+            setError("ABHA address is required");
+            return;
+        }
+
         try {
             setLoading(true);
 
@@ -22,13 +30,20 @@ export default function ABHASetupPage() {
 
             setTxnId(result.txnId);
         } catch (error) {
-            console.error(error);
+            setError(error instanceof Error ? error.message : "Something went wrong");
         } finally {
             setLoading(false);
         }
     };
 
     const handleVerifyOtp = async () => {
+        setError("");
+
+        if (!otp.trim()) {
+            setError("OTP is required");
+            return;
+        }
+
         try {
             setLoading(true);
 
@@ -39,7 +54,7 @@ export default function ABHASetupPage() {
 
             setLinked(true);
         } catch (error) {
-            console.error(error);
+            setError(error instanceof Error ? error.message : "Something went wrong");
         } finally {
             setLoading(false);
         }
@@ -58,6 +73,10 @@ export default function ABHASetupPage() {
                         <ShieldCheck className="text-emerald-600" />
                         <h1 className="text-2xl font-bold">ABHA Setup</h1>
                     </div>
+
+                    {error && (
+                        <div className="mb-4 rounded-xl bg-red-100 p-4 text-red-700">{error}</div>
+                    )}
 
                     {!linked && (
                         <div className="space-y-4">
