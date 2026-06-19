@@ -452,7 +452,15 @@
         "importError": "ଅବୈଧ ବ୍ୟାକଅପ୍ ଫାଇଲ୍। ଦୟାକରି ବୈଧ JSON ବ୍ୟାକଅପ୍ ଅପଲୋଡ୍ କରନ୍ତୁ।",
         "statusExpired": "ମିଆଦ ଶେଷ",
         "statusExpiringSoon": "ଶୀଘ୍ର ମିଆଦ ଶେଷ ହେବ ({days} ଦିନ)",
-        "statusSafe": "ସୁରକ୍ଷିତ"
+        "statusSafe": "ସୁରକ୍ଷିତ",
+        "exportCSV": "CSV ରପ୍ତାନି କରନ୍ତୁ",
+        "exportPDF": "PDF ରପ୍ତାନି କରନ୍ତୁ",
+        "print": "ପ୍ରିଣ୍ଟ କରନ୍ତୁ",
+        "csvExportSuccess": "CSV ସଫଳତାର ସହ ରପ୍ତାନି ହେଲା",
+        "pdfExportSuccess": "PDF ସଫଳତାର ସହ ରପ୍ତାନି ହେଲା",
+        "noMedicinesToDisplay": "ଦେଖାଇବା ପାଇଁ କୌଣସି ଔଷଧ ନାହିଁ",
+        "generatedOn": "ମିଆଦ ଶେଷ",
+        "deleteMedicine": "ଔଷଧ ହଟାନ୍ତୁ"
     },
     "Login": {
         "brandSubtitle": "ଔଷଧ ସୁରକ୍ଷା ପ୍ଲାଟଫର୍ମ",

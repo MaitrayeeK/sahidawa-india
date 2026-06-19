@@ -461,7 +461,15 @@
         "importError": "अमान्य बैकअप फाइल। कृपया एकटा वैध JSON बैकअप अपलोड करू।",
         "statusExpired": "समाप्त",
         "statusExpiringSoon": "जल्दी समाप्त ({days}दिन)",
-        "statusSafe": "सुरक्षित"
+        "statusSafe": "सुरक्षित",
+        "exportCSV": "CSV निर्यात करें",
+        "exportPDF": "PDF निर्यात करें",
+        "print": "प्रिंट करें",
+        "csvExportSuccess": "CSV सफलतापूर्वक निर्यात किया गया",
+        "pdfExportSuccess": "PDF सफलतापूर्वक निर्यात किया गया",
+        "noMedicinesToDisplay": "प्रदर्शित करने के लिए कोई दवा नहीं है",
+        "generatedOn": "जल्दी समा",
+        "deleteMedicine": "दवा हटाएं"
     },
     "Login": {
         "brandSubtitle": "दवाइ सुरक्षा प्लेटफॉर्म",

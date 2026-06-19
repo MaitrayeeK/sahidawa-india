@@ -452,7 +452,15 @@
         "importError": "ಅಮಾನ್ಯ ಬ್ಯಾಕಪ್ ಫೈಲ್. ದಯವಿಟ್ಟು ಮಾನ್ಯ JSON ಬ್ಯಾಕಪ್ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ.",
         "statusExpired": "ಅವಧಿ ಮುಗಿದಿದೆ",
         "statusExpiringSoon": "ಶೀಘ್ರದಲ್ಲೇ ಅವಧಿ ಮುಗಿಯಲಿದೆ ({days} ದಿನಗಳು)",
-        "statusSafe": "ಸುರಕ್ಷಿತ"
+        "statusSafe": "ಸುರಕ್ಷಿತ",
+        "exportCSV": "CSV ರಫ್ತು ಮಾಡಿ",
+        "exportPDF": "PDF ರಫ್ತು ಮಾಡಿ",
+        "print": "ಪ್ರಿಂಟ್ ಮಾಡಿ",
+        "csvExportSuccess": "CSV ಯಶಸ್ವಿಯಾಗಿ ರಫ್ತು ಮಾಡಲಾಗಿದೆ",
+        "pdfExportSuccess": "PDF ಯಶಸ್ವಿಯಾಗಿ ರಫ್ತು ಮಾಡಲಾಗಿದೆ",
+        "noMedicinesToDisplay": "ಪ್ರದರ್ಶಿಸಲು ಯಾವುದೇ ಔಷಧಗಳಿಲ್ಲ",
+        "generatedOn": "ದಲ್ಲೇ ಅವಧಿ ಮುಗಿಯ",
+        "deleteMedicine": "ಔಷಧವನ್ನು ಅಳಿಸಿ"
     },
     "Login": {
         "brandSubtitle": "ಔಷಧ ಸುರಕ್ಷತಾ ವೇದಿಕೆ",

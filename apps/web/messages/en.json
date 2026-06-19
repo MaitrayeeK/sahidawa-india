@@ -564,7 +564,15 @@
         "dueStatus": "Due",
         "overdueStatus": "Overdue",
         "upcomingStatus": "Upcoming",
-        "markCompleteButton": "Mark completed"
+        "markCompleteButton": "Mark completed",
+        "exportCSV": "Export CSV",
+        "exportPDF": "Export PDF",
+        "print": "Print",
+        "csvExportSuccess": "CSV exported successfully",
+        "pdfExportSuccess": "PDF exported successfully",
+        "noMedicinesToDisplay": "No medicines to display",
+        "generatedOn": "Generated On",
+        "deleteMedicine": "Delete medicine"
     },
     "Login": {
         "brandSubtitle": "Medicine safety platform",

@@ -452,7 +452,15 @@
         "importError": "தவறான காப்புப்பிரதி கோப்பு. சரியான JSON காப்புப்பிரதியைப் பதிவேற்றவும்.",
         "statusExpired": "காலாவதியானது",
         "statusExpiringSoon": "விரைவில் காலாவதியாகும் ({days} நாட்கள்)",
-        "statusSafe": "பாதுகாப்பானது"
+        "statusSafe": "பாதுகாப்பானது",
+        "exportCSV": "CSVஐ ஏற்றுமதி செய்",
+        "exportPDF": "PDFஐ ஏற்றுமதி செய்",
+        "print": "அச்சிடு",
+        "csvExportSuccess": "CSV வெற்றிகரமாக ஏற்றுமதி செய்யப்பட்டது",
+        "pdfExportSuccess": "PDF வெற்றிகரமாக ஏற்றுமதி செய்யப்பட்டது",
+        "noMedicinesToDisplay": "காண்பிக்க எந்த மருந்துகளும் இல்லை",
+        "generatedOn": "உருவாக்கப்பட்ட தேதி (கடைசியாக",
+        "deleteMedicine": "மருந்தை நீக்கு"
     },
     "Login": {
         "brandSubtitle": "மருந்து பாதுகாப்பு தளம்",

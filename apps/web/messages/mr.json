@@ -452,7 +452,15 @@
         "importError": "अवैध बॅकअप फाइल. कृपया वैध JSON बॅकअप अपलोड करा.",
         "statusExpired": "कालबाह्य",
         "statusExpiringSoon": "लवकरच कालबाह्य होईल ({days} दिवस)",
-        "statusSafe": "सुरक्षित"
+        "statusSafe": "सुरक्षित",
+        "exportCSV": "CSV निर्यात करा",
+        "exportPDF": "PDF निर्यात करा",
+        "print": "प्रिंट करा",
+        "csvExportSuccess": "CSV यशस्वीरित्या निर्यात केले",
+        "pdfExportSuccess": "PDF यशस्वीरित्या निर्यात केले",
+        "noMedicinesToDisplay": "दाखवण्यासाठी कोणतीही औषधे नाहीत",
+        "generatedOn": "फाइल. कृपया वैध JSON बॅकअ",
+        "deleteMedicine": "औषध हटवा"
     },
     "Login": {
         "brandSubtitle": "औषध सुरक्षा व्यासपीठ",

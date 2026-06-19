@@ -452,7 +452,15 @@
         "importError": "অবৈধ ব্যাকআপ ফাইল। অনুগ্রহ করে একটি বৈধ JSON ব্যাকআপ আপলোড করুন।",
         "statusExpired": "মেয়াদোত্তীর্ণ",
         "statusExpiringSoon": "শীঘ্রই মেয়াদ শেষ হবে ({days} দিন)",
-        "statusSafe": "নিরাপদ"
+        "statusSafe": "নিরাপদ",
+        "exportCSV": "CSV এক্সপোর্ট করুন",
+        "exportPDF": "PDF এক্সপোর্ট করুন",
+        "print": "প্রিন্ট করুন",
+        "csvExportSuccess": "CSV সফলভাবে এক্সপোর্ট করা হয়েছে",
+        "pdfExportSuccess": "PDF সফলভাবে এক্সপোর্ট করা হয়েছে",
+        "noMedicinesToDisplay": "প্রদর্শন করার মতো কোনো ওষুধ নেই",
+        "generatedOn": "মেয়াদ শেষ হ",
+        "deleteMedicine": "ওষুধ মুছুন"
     },
     "Login": {
         "brandSubtitle": "ওষুধ নিরাপত্তা প্ল্যাটফর্ম",

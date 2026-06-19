@@ -452,7 +452,15 @@
         "importError": "अमान्या प्रतिलिपिः। कृपया मान्यं JSON प्रतिलिपिं आरोपयतु।",
         "statusExpired": "अवधिक्षीणम्",
         "statusExpiringSoon": "({days} दिनेषु) अवधिक्षीणम्",
-        "statusSafe": "सुरक्षितम्"
+        "statusSafe": "सुरक्षितम्",
+        "exportCSV": "सीएसवी (CSV) निर्यात करें",
+        "exportPDF": "पीडीएफ (PDF) निर्यात करें",
+        "print": "प्रिंट करें",
+        "csvExportSuccess": "सीएसवी (CSV) सफलतापूर्वक निर्यात किया गया",
+        "pdfExportSuccess": "पीडीएफ (PDF) सफलतापूर्वक निर्यात किया गया",
+        "noMedicinesToDisplay": "प्रदर्शित करने के लिए कोई दवा उपलब्ध नहीं है",
+        "generatedOn": "इस तिथि को जनरेट किया गया",
+        "deleteMedicine": "दवा हटाएं"
     },
     "Login": {
         "brandSubtitle": "औषधसुरक्षा-मञ्चः",

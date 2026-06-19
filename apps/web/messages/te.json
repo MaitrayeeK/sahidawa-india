@@ -452,7 +452,15 @@
         "importError": "చెల్లని బ్యాకప్ ఫైల్. దయచేసి చెల్లుబాటు అయ్యే JSON బ్యాకప్‌ను అప్‌లోడ్ చేయండి.",
         "statusExpired": "గడువు ముగిసింది",
         "statusExpiringSoon": "త్వరలో గడువు ముగియనుంది ({days} రోజులు)",
-        "statusSafe": "సురక్షితం"
+        "statusSafe": "సురక్షితం",
+        "exportCSV": "CSVని ఎగుమతి చేయి",
+        "exportPDF": "PDFని ఎగుమతి చేయి",
+        "print": "ప్రింట్ చేయి",
+        "csvExportSuccess": "CSV విజయవంతంగా ఎగుమతి చేయబడింది",
+        "pdfExportSuccess": "PDF విజయవంతంగా ఎగుమతి చేయబడింది",
+        "noMedicinesToDisplay": "ప్రదర్శించడానికి ఎటువంటి మందులు లేవు",
+        "generatedOn": "లో గడువు ముగియనుం",
+        "deleteMedicine": "మందును తొలగించు"
     },
     "Login": {
         "brandSubtitle": "ఔషధ భద్రతా వేదిక",

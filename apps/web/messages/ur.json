@@ -452,7 +452,15 @@
         "importError": "غلط بیک اپ فائل۔ براہ کرم درست JSON بیک اپ اپ لوڈ کریں۔",
         "statusExpired": "میعاد ختم",
         "statusExpiringSoon": "جلد میعاد ختم ہوگی ({days} دن)",
-        "statusSafe": "محفوظ"
+        "statusSafe": "محفوظ",
+        "exportCSV": "سی ایس وی (CSV) ایکسپورٹ کریں",
+        "exportPDF": "پی ڈی ایف (PDF) ایکسپورٹ کریں",
+        "print": "پرنٹ کریں",
+        "csvExportSuccess": "سی ایس وی (CSV) کامیابی کے ساتھ ایکسپورٹ ہو گیا",
+        "pdfExportSuccess": "پی ڈی ایف (PDF) کامیابی کے ساتھ ایکسپورٹ ہو گیا",
+        "noMedicinesToDisplay": "دکھانے کے لیے کوئی ادویات نہیں ہیں",
+        "generatedOn": "لد میعاد ختم",
+        "deleteMedicine": "دوا حذف کریں"
     },
     "Login": {
         "brandSubtitle": "ادویات کی حفاظت کا پلیٹ فارم",

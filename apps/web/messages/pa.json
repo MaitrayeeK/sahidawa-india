@@ -452,7 +452,15 @@
         "importError": "ਅਵੈਧ ਬੈਕਅੱਪ ਫ਼ਾਈਲ। ਕਿਰਪਾ ਕਰਕੇ ਵੈਧ JSON ਬੈਕਅੱਪ ਅੱਪਲੋਡ ਕਰੋ।",
         "statusExpired": "ਮਿਆਦ ਪੂਰੀ",
         "statusExpiringSoon": "ਜਲਦੀ ਮਿਆਦ ਪੂਰੀ ਹੋਵੇਗੀ ({days} ਦਿਨ)",
-        "statusSafe": "ਸੁਰੱਖਿਅਤ"
+        "statusSafe": "ਸੁਰੱਖਿਅਤ",
+        "exportCSV": "CSV ਐਕਸਪੋਰਟ ਕਰੋ",
+        "exportPDF": "PDF ਐਕਸਪੋਰਟ ਕਰੋ",
+        "print": "ਪ੍ਰਿੰਟ ਕਰੋ",
+        "csvExportSuccess": "CSV ਸਫਲਤਾਪੂਰਵਕ ਐਕਸਪੋਰਟ ਹੋ ਗਿਆ",
+        "pdfExportSuccess": "PDF ਸਫਲਤਾਪੂਰਵਕ ਐਕਸਪੋਰਟ ਹੋ ਗਿਆ",
+        "noMedicinesToDisplay": "ਦਿਖਾਉਣ ਲਈ ਕੋਈ ਦਵਾਈ ਨਹੀਂ ਹੈ",
+        "generatedOn": "ਦੀ ਮਿਆਦ ਪੂਰੀ ਹੋਵੇ",
+        "deleteMedicine": "ਦਵਾਈ ਹਟਾਓ"
     },
     "Login": {
         "brandSubtitle": "ਦਵਾਈ ਸੁਰੱਖਿਆ ਪਲੇਟਫਾਰਮ",

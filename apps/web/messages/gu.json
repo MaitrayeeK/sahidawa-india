@@ -469,7 +469,15 @@
         "importDateError": "બેકઅપમાં અમાન્ય તારીખ ફોર્મેટ મળ્યો. બધી તારીખો YYYY-MM-DD ફોર્મેટમાં હોવી જોઈએ.",
         "statusExpired": "સમાપ્ત",
         "statusExpiringSoon": "ટૂંક સમયમાં સમાપ્ત થશે ({days} દિવસ)",
-        "statusSafe": "સુરક્ષિત"
+        "statusSafe": "સુરક્ષિત",
+        "exportCSV": "CSV નિકાસ કરો",
+        "exportPDF": "PDF નિકાસ કરો",
+        "print": "પ્રિન્ટ કરો",
+        "csvExportSuccess": "CSV સફળતાપૂર્વક નિકાસ કરવામાં આવ્યું",
+        "pdfExportSuccess": "PDF સફળતાપૂર્વક નિકાસ કરવામાં આવ્યું",
+        "noMedicinesToDisplay": "દર્શાવવા માટે કોઈ દવાઓ નથી",
+        "generatedOn": " સમયમાં સમાપ્ત થ",
+        "deleteMedicine": "દવા કાઢી નાખો"
     },
     "Login": {
         "brandSubtitle": "દવા સુરક્ષા પ્લેટફોર્મ",
