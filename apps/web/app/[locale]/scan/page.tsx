@@ -298,8 +298,8 @@ export default function ScanPage() {
             />
 
             <PageHeader
-               title={tScan("scanMedicine")}
-               subtitle={tScan("positionBarcode")}
+                title={tScan("scanMedicine")}
+                subtitle={tScan("positionBarcode")}
                 backHref="/"
                 variant="light"
             />
@@ -453,7 +453,7 @@ export default function ScanPage() {
                         type="text"
                         value={batchInput}
                         onChange={(e) => setBatchInput(e.target.value)}
-                       placeholder={tScan("enterBatchNumber")}
+                        placeholder={tScan("enterBatchNumber")}
                         className="flex-1 rounded-full border border-(--color-border-muted) bg-(--color-surface-muted) px-4 py-3 text-center text-sm font-medium text-(--color-text-primary) placeholder-(--color-text-muted) focus:border-transparent focus:ring-2 focus:ring-emerald-500 focus:outline-none dark:border-white/20 dark:bg-white/10 dark:text-white dark:placeholder-white/40"
                     />
                     <button
@@ -466,15 +466,15 @@ export default function ScanPage() {
                     </button>
                 </form>
 
-              <p className="max-w-xs text-center text-sm font-medium text-slate-400">
-              {tScan("batchNumberHelp")}
-              </p>
+                <p className="max-w-xs text-center text-sm font-medium text-slate-400">
+                    {tScan("batchNumberHelp")}
+                </p>
                 <Link
                     href="/history"
                     className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-white/20 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-black focus:outline-none dark:border-white/20"
                 >
                     <History size={18} />
-                    tScan("viewHistory")
+                    {tScan("viewHistory")}
                 </Link>
                 <div className="flex gap-4">
                     <button
@@ -487,7 +487,7 @@ export default function ScanPage() {
                         }`}
                     >
                         <ScanLine size={18} />
-                        {isCameraActive ? tScan("scanBarcode") : tScan("Scan Barcode")}
+                        {isCameraActive ? tScan("stopScanner") : tScan("ScanBarcode")}
                     </button>
                     <label
                         htmlFor={isOffline ? undefined : "medicine-upload"}
@@ -504,7 +504,7 @@ export default function ScanPage() {
                         }`}
                     >
                         <Layers size={18} />
-                     tScan("uploadPhoto")
+                        {tScan("uploadPhoto")}
                     </label>
                 </div>
             </div>
